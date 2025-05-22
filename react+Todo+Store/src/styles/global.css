@@ -1,0 +1,455 @@
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.navbar {
+    background: #007bff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.layout-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2rem;
+    animation: slideFadeIn 0.5s ease-in-out;
+}
+
+
+/* style of menu page*/
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.menu-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    animation: slideFadeIn 0.5s ease-in-out;
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-btn {
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+
+/*style of quotes*/
+
+.Quotes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(to right, #d1f4ff, #a6e3e9);
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.Quotes-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    animation: slideFadeIn 0.5s ease-in-out;
+}
+
+.Quotes-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.Quotes-card {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    border: none;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Quotes-card .card-title {
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.Quotes-card .card-text {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+
+/*page of Login*/
+
+
+/* animation */
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slideFadeIn {
+    animation: slideFadeIn 0.6s ease-out;
+}
+
+
+/* Login Page */
+
+.Login-page {
+    min-height: 100vh;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vazirmatn', sans-serif;
+    /* اگر فونت خاصی داری */
+}
+
+.Login-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.Login-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.Login-content form label {
+    font-weight: 500;
+}
+
+.Login-content .form-control {
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 1rem;
+}
+
+.Login-content .btn-primary {
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #5a67d8;
+    border: none;
+}
+
+.Login-content .btn-primary:hover {
+    background-color: #4c51bf;
+}
+
+.Login-content a {
+    color: #5a67d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Login-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* page of sign up*/
+
+.Login-content .btn-success {
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #38a169;
+    /* سبز ملایم هماهنگ */
+    border: none;
+}
+
+.Login-content .btn-success:hover {
+    background-color: #2f855a;
+}
+
+.Login-page {
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.Login-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.Login-title {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.slideFadeIn {
+    animation: slideFadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*kkdkfkdfkjdkfjdkjfdkjfdkjfd*/
+
+
+/* ساختار کلی */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+
+/* ستون محصولات */
+
+.col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* کارت محصول */
+
+.card {
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: #555;
+    height: 35px;
+    overflow: hidden;
+}
+
+.card .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+}
+
+
+/* ستون سبد خرید */
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* سبد خرید */
+
+.cart-section {
+    width: 100%;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    position: sticky;
+    top: 50px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.cart-section h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* آیتم‌های سبد خرید */
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+.list-group-item .btn-outline-danger {
+    border: none;
+    font-size: 1.1rem;
+    color: #dc3545;
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+.list-group-item .btn-outline-danger:hover {
+    transform: scale(1.2);
+    color: #a71d2a;
+}
+
+.cart-section .btn-danger {
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+/* اسکرول بار زیبا برای سبد خرید */
+
+.cart-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cart-section::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+}
+
+.cart-section::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+
+/* ریسپانسیو برای موبایل */
+
+@media (max-width: 768px) {
+    .col-md-8,
+    .col-md-4 {
+        width: 100%;
+        max-width: 100%;
+    }
+    .card img {
+        height: 100px;
+    }
+    .cart-section {
+        position: relative;
+        top: 0;
+        max-height: unset;
+        margin-top: 2rem;
+    }
+}
+
+.products-box {
+    background: linear-gradient(135deg, #e0f7fa, #2f72b08e);
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    border: 1px solid #eee;
+    margin-bottom: 2rem;
+}
