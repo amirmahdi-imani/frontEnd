@@ -24,3 +24,8 @@ This is a professional-level e-commerce web application built with Next.js, Redu
 - React Hook Form
 - Zod (validation)
 - Lucide Icons
+
+
+
+
+live site : next-react-blogs-store.vercel.app
