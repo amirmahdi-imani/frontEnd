@@ -1,0 +1,313 @@
+.pageWrapper {
+    min-height: 100vh;
+    padding: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 2.25rem;
+    /* 36px */
+    font-weight: 800;
+    user-select: none;
+}
+
+.addButton {
+    background-color: #22c55e;
+    /* green-500 */
+    color: white;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgb(34 197 94 / 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.addButton:hover,
+.addButton:focus {
+    background-color: #16a34a;
+    /* green-600 */
+    outline: none;
+    transform: scale(1.08);
+    box-shadow: 0 12px 20px -4px rgb(22 163 74 / 0.7);
+}
+
+.blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.blogCard {
+    background: linear-gradient(135deg, #2d3748, #4a5568);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    min-width: 280px;
+    max-width: 400px;
+    min-height: 200px;
+    position: relative;
+}
+
+.blogCard:hover {
+    transform: scale(1.06);
+    filter: brightness(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* متن عنوان */
+
+.blogTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* زیر عنوان */
+
+.blogSubject {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #a0aec0;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* توضیحات با محدودیت خطوط */
+
+.blogDescription {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-bottom: 12px;
+}
+
+
+/* تاریخ */
+
+.blogDate {
+    font-size: 0.75rem;
+    color: #718096;
+    text-align: right;
+}
+
+
+/* انیمیشن چرخش آرام */
+
+@keyframes spinSlow1 {
+    0%,
+    100% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes spinSlow2 {
+    0%,
+    100% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(7deg);
+    }
+}
+
+@keyframes spinSlow3 {
+    0%,
+    100% {
+        transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(-1deg);
+    }
+}
+
+.spinSlow1 {
+    animation: spinSlow1 10s ease-in-out infinite;
+}
+
+.spinSlow2 {
+    animation: spinSlow2 4s ease-in-out infinite;
+}
+
+.spinSlow3 {
+    animation: spinSlow3 15s ease-in-out infinite;
+}
+
+
+/* ویرایشگر بلاگ */
+
+.editorOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.editorModal {
+    background-color: #1a202c;
+    color: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 32px 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #a0aec0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: white;
+    outline: none;
+}
+
+.editorTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    user-select: none;
+}
+
+.editorForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input,
+.textarea {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: white;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #718096;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 5px #22c55e;
+}
+
+.textarea {
+    min-height: 140px;
+}
+
+.editorButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.deleteButton {
+    background-color: #dc2626;
+    /* red-600 */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 6px 12px rgba(220, 38, 38, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+    background-color: #b91c1c;
+    /* red-700 */
+    outline: none;
+    transform: scale(1.05);
+}
+
+.saveButton {
+    background-color: #22c55e;
+    /* green-500 */
+    color: white;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 8px 16px rgba(34, 197, 94, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.saveButton:hover,
+.saveButton:focus {
+    background-color: #16a34a;
+    /* green-600 */
+    outline: none;
+    transform: scale(1.05);
+}
+
+
+/* ریسپانسیو */
+
+@media (max-width: 768px) {
+    .blogsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+}

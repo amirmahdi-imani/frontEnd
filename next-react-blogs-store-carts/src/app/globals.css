@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@keyframes dynamic-rotation {
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(15deg);
+    }
+}
+
+@keyframes scale-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes ping-dynamic {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80%,
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.animate-ping-dynamic {
+    animation: ping-dynamic 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+
+/* ریسپانسیو (موبایل) */
+
+@media (max-width: 640px) {
+    div[style*="dynamic-rotation"] {
+        animation-name: scale-pulse !important;
+        animation-duration: 4s !important;
+        animation-iteration-count: infinite !important;
+        animation-direction: alternate !important;
+    }
+}
