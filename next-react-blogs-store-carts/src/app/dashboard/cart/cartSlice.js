@@ -117,4 +117,3 @@ const cartSlice = createSlice({
 });
 
 export default cartSlice.reducer;
-export { fetchCart, updateQuantity, removeFromCartDB };
