@@ -90,10 +90,10 @@ export default function CartPage() {
           <p className="text-xl text-green-600">{total.toLocaleString()} usd</p>
         </div>
         <div className="flex space-x-4">
-          <button className="bg-blue-100 text-blue-800/90 px-4 py-2 rounded hover:bg-blue-300/95">
+          <button onClick={()=>router.push('../../products')} className="bg-blue-100 text-blue-800/90 px-4 py-2 rounded hover:bg-blue-300/95">
             Buy another product
           </button>
-          <button className="bg-green-700/95 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button className="corsur-pointer bg-green-700/95 text-white px-6 py-2 rounded hover:bg-green-700">
             Payment 💳
           </button>
         </div>
